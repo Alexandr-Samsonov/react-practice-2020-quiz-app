@@ -37,7 +37,7 @@ class Quiz extends Component {
         ],
     };
 
-    retryHandler = () => {
+    onRetryHandler = () => {
       this.setState({
           isFinished: false,
           activeQuestion: 0,
@@ -106,7 +106,7 @@ class Quiz extends Component {
                             ? <FinishedQuiz
                                 results={this.state.results}
                                 quiz={this.state.quiz}
-                                onRetry={this.retryHandler}
+                                onRetry={this.onRetryHandler}
                             />
                             : <ActiveQuiz
                                 answers={this.state.quiz[this.state.activeQuestion].answers}
